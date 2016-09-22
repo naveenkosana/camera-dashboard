@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="copyright" content="Copyright © 2016 I.B.M. All rights reserved.
+
+         Licensed under the Apache License, Version 2.0 (the “License”);
+         you may not use this file except in compliance with the License.
+         You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+         Unless required by applicable law or agreed to in writing, software
+         distributed under the License is distributed on an “AS IS” BASIS,
+         WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+         See the License for the specific language governing permissions and
+         limitations under the License.">
+    <meta name="description" content="Watson Conversation Service Car Dashboard Sample Application">
+    <title>Watson Conversation Service Car Dashboard Sample Application</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <link href="cam-style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="ct" content="vPWQz9kc-2sDXDdB6m_K5RLm_mwStA0c3cyo">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div id="dark-overlay" class="overlay"></div>
+    <div id="clear-overlay" class="overlay"></div>
+    <!--The main car dashboard SVG-->
+    <div id="svg_wrapper">
+        <div id="output-audio" class="audio-on" onclick="TTSModule.toggle()" value="ON"></div>
+        <button id="help" class="tooltip-dialog-btn" onclick="Sidebar.toggle()">What can I ask?</button>
+        <div id="svg_size">
+            
+            <a href="#" class="container">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 180 180" enable-background="new 0 0 180 180" xml:space="preserve">
+                        <g class="outer">
+                    <circle stroke="#202123" stroke-width="7" stroke-miterlimit="10" cx="90" cy="90" r="85.5"/>
+                    <path fill="none" stroke="#202123" stroke-width="4" stroke-miterlimit="10" d="M17.9,71.7C23.9,47.4,42,28,65.3,19.8 M154,127.2
+                        c-5.7,9.6-13.4,18-22.6,24.2"/>
+                        </g>
+                        <g class="mid">
+                    <circle stroke="#202123" stroke-width="11" stroke-miterlimit="10" cx="90" cy="90" r="59.8"/>
+                    <path fill="none" stroke-width="3" stroke-miterlimit="10" d="M109.3,33.4c15.8,5.4,28.7,17.2,35.4,32.5
+                        M61.5,142.6c-7.8-4.2-14.7-10.3-19.9-17.5"/>
+                        </g>
+                        <g class="inner">
+                    <circle stroke="#202123" stroke-miterlimit="10" cx="90" cy="90" r="18"/>
+                        </g>
+                        <g class="lens-flare">
+                    <circle fill="#FFFFFF" cx="108.6" cy="66.2" r="19.9"/>
+                    <circle fill="#FFFFFF" cx="73.9" cy="112.5" r="10.9"/>
+                        </g>
+                    </svg>
+             <a>
+            <!--<svg id="svg_canvas" viewBox="0 0 1024 704" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>-->
+        </div>
+        <div class="chatUi">
+            <div id="chat-scroll-wrapper"><div id="chat-flow"></div></div>
+            <div id="input-wrapper" class="responsive-columns-wrapper">
+                <div id="input-mic-holder">
+                    <div id="input-mic" class="inactive-mic" onclick="STTModule.micON()"></div>
+                </div>
+
+                <label for="user-input" class="input-outline responsive-column">
+                  <input id="user-input" type="text" placeholder="Type something na please, e.g. “Turn the headlights on”">
+                </label>
+            </div>
+        </div>
+        <div id="tooltip-dialog-list"></div>
+        <div id="sidebar">
+            <div class="close-div" onclick="Sidebar.toggle()">
+                <img src="images/close-button.png" class="close" alt="close" />
+            </div>
+            <p class="pre-bar">I’m trained on these topics:</p>
+            <ul id="suggestion-list"></ul>
+        </div>
+    </div>
+    <!--<script>
+        // For cloaking. Done in JS for the case of disabled JS (i.e. even though not much will work, something will be displayed.)
+        document.body.style.visibility = 'hidden';
+    </script>-->
+    <script src="vendor.min.js"></script>
+    <script src="dashboard.min.js"></script>
+    <script src="ibm/watson-speech.min.js"></script>
+    <script src="ibm/speech-to-text.js"></script>
+    <script src="ibm/text-to-speech.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+{
+   "conversation": [
+      {
+         "credentials": {
+            "url": "https://gateway.watsonplatform.net/conversation/api",
+            "password": "WN6HPMzc8fmG",
+            "username": "c909b643-6676-420a-85e3-46df8991079f"
+         },
+         "syslog_drain_url": null,
+         "label": "conversation",
+         "provider": null,
+         "plan": "free",
+         "name": "conversation-service",
+         "tags": [
+            "watson",
+            "ibm_created",
+            "ibm_dedicated_public"
+         ]
+      }
+   ],
+   "speech_to_text": [
+      {
+         "credentials": {
+            "url": "https://stream.watsonplatform.net/speech-to-text/api",
+            "password": "7zJqVbDP3Rnk",
+            "username": "c9013003-221a-4971-a39c-563b7e731919"
+         },
+         "syslog_drain_url": null,
+         "label": "speech_to_text",
+         "provider": null,
+         "plan": "standard",
+         "name": "speech-to-text-service",
+         "tags": [
+            "watson",
+            "ibm_created",
+            "ibm_dedicated_public"
+         ]
+      }
+   ],
+   "text_to_speech": [
+      {
+         "credentials": {
+            "url": "https://stream.watsonplatform.net/text-to-speech/api",
+            "password": "unclkbLY0mUb",
+            "username": "32bd0805-3fa1-488c-a88d-dd0429ead2ee"
+         },
+         "syslog_drain_url": null,
+         "label": "text_to_speech",
+         "provider": null,
+         "plan": "standard",
+         "name": "text-to-speech-service",
+         "tags": [
+            "watson",
+            "ibm_created",
+            "ibm_dedicated_public"
+         ]
+      }
+   ]
+}
